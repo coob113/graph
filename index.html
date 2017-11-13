@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-forcegraph-component/dist/aframe-forcegraph-component.min.js"></script>
+</head>
+ 
+<body>
+    <a-scene class="fullscreen" fog="color: #222b53; far: 50; near: 0; density: 0" >
+    
+   <a-entity forcegraph="json-url: myGraphData.json"></a-entity>
+    
+    <a-camera wasd-controls="fly: true; acceleration: 600">
+        <a-cursor color="lavender" opacity="0.5"></a-cursor>
+      </a-camera>
+      <a-sky color="#002"></a-sky>
+
+      <a-entity forcegraph="json-url: miserables.json; name-field: id; auto-color-by: group"></a-entity>
+    
+    </a-scene>
+  
+    <textarea readonly="" style="font-size: 12pt; border: 0px; padding: 0px; margin: 0px; position: absolute; left: -9999px; top: 0px;"></textarea>
+    
+    
+</body>
+</html>
